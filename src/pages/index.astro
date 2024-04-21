@@ -1,0 +1,81 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import Badge from "../components/Badge.astro";
+import SocialLinks from "../components/SocialLinks.astro";
+import LinkedInIcon from "../icons/LinkedIn.astro";
+import GitHubIcon from  "../icons/GitHub.astro";
+import MailIcon from "../icons/Mail.astro";
+import { Image } from "astro:assets";
+import logo from "../assets/marco.jpg";
+import aboutMePicture from "../assets/marco-2.png";
+import Experience from "../components/Experience.astro";
+import SectionContainer from "../components/Section-Container.astro";
+import BriefcaseIcon from "../icons/Briefcase.astro";
+import UserIcon from "../icons/User.astro";
+import AboutMe from "../components/AboutMe.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout
+  title="Portfolio de Marco - Desarrollador y Programador Web con más de 3 años de experiencia"
+  description="Contrata a Marco para crear tu página web única y sostenible. Especializado en crear páginas web úicas y fiables."
+>
+  <main class="px-6">
+    <SectionContainer class="py-8">
+      <Image class="rounded-full size-20 mb-8 hover:scale-125 transition-transform" src={logo} alt="logo" />
+      <h1 class="text-white text-2xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
+        Hey, soy Marco <div class="flex justify-center items-center">
+          <a
+            href="https://www.linkedin.com/in/marco-rodriguez-rey-b082361b9/"
+            target="_blank"
+            rel="noopener"><Badge>Disponible para trabajar</Badge></a
+          >
+        </div>
+      </h1>
+      <h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
+        +3 años de experiencia. <strong class="text-yellow-300"
+          >Estudiante de segundo año de Grado Superior de DAW</strong
+        >. Soy de Madrid, España 🇪🇸 . <span class="opacity-85"
+          >Especializado en crear webs únicas.</span
+        >
+      </h2>
+
+      <ul class="flex gap-x-4 mt-6 flex-wrap">
+        <li class="hover:scale-110 transition-transform pb-4">
+          <SocialLinks
+            href="https://www.linkedin.com/in/marco-rodriguez-rey-b082361b9/"
+          >
+            <LinkedInIcon class="size-4 lg:size-6" />LinkedIn
+          </SocialLinks>
+        </li>
+        <li class="hover:scale-110 transition-transform">
+          <SocialLinks href="https://github.com/Markix1">
+            <GitHubIcon class="size-4 lg:size-6" />GitHub
+          </SocialLinks>
+        </li>
+        <li class="hover:scale-110 transition-transform">
+          <SocialLinks href="https://github.com/Markix1">
+            <MailIcon class="size-4 lg:size-6" />marco.valdemoro@gmail.com
+          </SocialLinks>
+        </li>
+      </ul>
+    </SectionContainer>
+
+    <SectionContainer id="experience">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+        <BriefcaseIcon class="size-8" />
+        Experiencia Laboral
+      </h2>
+      <Experience />
+    </SectionContainer>
+
+    <SectionContainer id="about-me" class="py-12">
+      <h2 class="text-3xl font-semibold mb-6 flex gap-x-4 items-center">
+        <UserIcon class="size-9" />
+        Sobre Mí
+      </h2>
+      <AboutMe />
+    </SectionContainer>
+  </main>
+</Layout>

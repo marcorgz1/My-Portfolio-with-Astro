@@ -1,0 +1,31 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const EXPERIENCE = [
+  {
+    date: "Actualmente...",
+    title: "Prácticas de Grado Superior de DAW",
+    description:
+      'Realizo las prácticas del Grado Superior de Desarrollo de Aplicaciones Web de forma online en una empresa llamada "Istel". Además aprendo nuevos lenguajes de programación por mi cuenta en mis tiempos libres.',
+  },
+  {
+    date: "Marzo 2021",
+    title: "Prácticas de Grado Medio de SMR",
+    description:
+      'Estuve realizando las prácticas del Grado Medio de SMR durante 3 meses en una empresa afiliada a Apple llamada "Rosellimac".',
+  }
+];
+---
+<!-- Esta parte corresponde a la lista con cada uno de los bloques de experiencia -->
+<ol class="relative border-s border-gray-200 dark:border-gray-700 ml-3">
+  {
+    // Por cada bloque de experiencia que haya
+    EXPERIENCE.map((experience) => (
+      // Renderizar componente del "ExperienceItem" con los datos de la experiencia
+      // <ExperienceItem {...experience} />: Pasar los datos de cada experiencia del componente "ExperienceItem" a este
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>

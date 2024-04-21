@@ -1,0 +1,49 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+// Importar la fuente que hemos instalado
+import "@fontsource-variable/onest";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { description, title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content={description} />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/programador.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div
+      class="absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]">
+    </div>
+    <Header />
+    <slot />
+    <Footer />
+  </body>
+</html>
+<style is:global>
+  :root {
+    color-scheme: light dark; /* Decirle al navegador que estamos utilizando el modo claro u oscuro para que modifique los estilos en base a esas preferencias */
+  }
+  html {
+    font-family: "Onest Variable", sans-serif;
+    scroll-behavior: smooth;
+  }
+
+  /* No hacer la animación de scroll si el usuario ha deshabilitado las animaciones en su SO */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+</style>
