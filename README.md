@@ -1,3 +1,57 @@
-# Mi portfolio básico utilizando el framework de Astro
+# Mi portfolio como developer
 
-![image](https://github.com/Markix1/My-Portfolio-with-Astro/assets/57867646/c7e560fa-2a3c-4fd0-8bdf-a84559eb2360)
+Realizado con el framework de Astro y Tailwind CSS
+
+![Portfolio Screenshot](image.png)
+
+Mi estructura de carpetas:
+
+Proyecto-Web-Standard/
+├── src
+│   ├── assets/
+│   │   ├── marco.jpg
+│   |—— components/
+|       ├── AboutMe.astro
+|       ├── Badge.astro
+|       ├── Card.astro
+|       ├── Experience.astro
+|       ├── ExperienceItem.astro
+|       ├── Footer.astro
+|       ├── Header.astro
+|       ├── SectionContainer.astro
+|       ├── SocialLinks.astro
+|   |―― icons
+|       |―― BriefCase.astro
+|       |―― GitHub.astro
+|       |―― Linkedin.astro
+|       |―― Mail.astro
+|       |―― User.astro
+|   |―― layouts
+|       |―― Layout.astro
+|   |―― pages
+|       |―― index.astro
+├── .gitignore
+├── .astro.config.mjs
+├── package.lock.json
+├── README.md
+└── tailwind.config.mjs
+└── typescript.json
+
+1. Instalación de las dependencias del proyecto:
+
+```sh
+npm install
+```
+
+2. Arrancar el proyecto:
+
+```sh
+npm run dev
+```
+
+Es necesario tener instalado tailwind y la fuente de `Onest`:
+
+```sh
+npx astro add tailwind
+npm install @fontsource-variable/onest
+```
