@@ -11,24 +11,25 @@ Proyecto-Web-Standard/
 ├── src
 │   ├── assets/
 │   │   ├── marco.jpg
-│   |—— components/
-|       ├── AboutMe.astro
-|       ├── Badge.astro
-|       ├── Card.astro
-|       ├── Experience.astro
-|       ├── ExperienceItem.astro
-|       ├── Footer.astro
-|       ├── Header.astro
-|       ├── SectionContainer.astro
-|       ├── SocialLinks.astro
+│   |–– components/
+|   |
+|   |   ├── AboutMe.astro
+|   |    ├── Badge.astro
+|   |    ├── Card.astro
+|   |    ├── Experience.astro
+|   |    ├── ExperienceItem.astro
+|   |    ├── Footer.astro
+|   |    ├── Header.astro
+|   |    ├── SectionContainer.astro
+|   |    ├── SocialLinks.astro
 |   |―― icons
-|       |―― BriefCase.astro
-|       |―― GitHub.astro
-|       |―― Linkedin.astro
-|       |―― Mail.astro
-|       |―― User.astro
+|   |    |―― BriefCase.astro
+|   |    |―― GitHub.astro
+|   |    |―― Linkedin.astro
+|   |    |―― Mail.astro
+|   |    |―― User.astro
 |   |―― layouts
-|       |―― Layout.astro
+|   |   |―― Layout.astro
 |   |―― pages
 |       |―― index.astro
 ├── .gitignore
