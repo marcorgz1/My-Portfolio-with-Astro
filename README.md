@@ -6,6 +6,7 @@ Realizado con el framework de Astro y Tailwind CSS
 
 Mi estructura de carpetas:
 
+```sh
 Proyecto-Web-Standard/
 ├── src
 │   ├── assets/
@@ -36,6 +37,7 @@ Proyecto-Web-Standard/
 ├── README.md
 └── tailwind.config.mjs
 └── typescript.json
+```
 
 1. Instalación de las dependencias del proyecto:
 
