@@ -16,12 +16,12 @@ const { title, date, description, link } = Astro.props
   class="mb-1 text-sm font-normal leading-none text-pink-300"
   >{date}</time
 >
-<h3 class="text-lg font-semibold text-yellow-300 mt-3">
+<h3 class="text-lg font-semibold dark:text-yellow-300 text-orange-400 mt-3">
   {title}
 </h3>
 <!-- text-pretty (text-wrap: pretty): Si un párrafo es muy largo y se queda una palabra suelta añade otra palabra a esa 
 línea para que no se quede sola -->
-<p class="mb-5 mt-4 text-base font-normal text-gray-300 text-balance">
+<p class="mb-5 mt-4 text-base font-normal dark:text-gray-300 text-black text-balance">
   {description}
 </p>
 {

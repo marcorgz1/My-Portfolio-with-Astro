@@ -16,7 +16,6 @@ import BriefcaseIcon from "../icons/Briefcase.astro";
 import UserIcon from "../icons/User.astro";
 import AboutMe from "../components/AboutMe.astro";
 import ClipboardIcon from "../icons/Clipboard.astro"
-import Footer from "../components/Footer.astro";
 ---
 
 <Layout
@@ -25,9 +24,9 @@ import Footer from "../components/Footer.astro";
 >
   <main class="px-6">
     <SectionContainer class="py-12">
-      <Image class="rounded-full size-20 mb-8 hover:scale-125 transition-transform duration-300" src={logo} alt="logo" />
-      <h1 class="text-white text-2xl md:text-4xl lg:text-4xl font-bold flex flex-row gap-x-3 pb-6 lg:pb-10">
-        Buenas, mi nombre es <strong class="text-yellow-300">Marco</strong>
+      <Image class="rounded-full size-20 mb-8 hover:scale-110 transition-transform duration-300" src={logo} alt="logo" />
+      <h1 class="dark:text-white text-2xl md:text-4xl lg:text-4xl font-bold flex flex-row gap-x-3 pb-6 lg:pb-10">
+        Buenas, mi nombre es <strong class="dark:text-yellow-300 text-orange-400">Marco</strong>
         <div class="flex justify-center items-center ml-6">
           <a href="https://www.linkedin.com/in/marco-rodriguez-rey-b082361b9/" target="_blank"
             rel="noopener"><Badge>Disponible para trabajar</Badge></a>
@@ -41,28 +40,20 @@ import Footer from "../components/Footer.astro";
         >
       </h2>
 
-      <ul class="flex gap-x-4 mt-6 flex-wrap">
-        <li class="hover:scale-110 transition-transform pb-4">
-          <SocialLinks
-            href="https://www.linkedin.com/in/marco-rodriguez-rey-b082361b9/"
-          >
-            <LinkedInIcon class="size-4 lg:size-6" />
-            <span class="hover:text-pink-300">LinkedIn</span>            
-          </SocialLinks>
-        </li>
-        <li class="hover:scale-110 transition-transform">
-          <SocialLinks href="https://github.com/Markix1">
-            <GitHubIcon class="size-4 lg:size-6" />
-            <span class="hover:text-pink-300">GitHub</span>
-          </SocialLinks>
-        </li>
-        <li class="hover:scale-110 transition-transform">
-          <SocialLinks href="https://github.com/Markix1">
-            <MailIcon class="size-4 lg:size-6" />
-            <span class="hover:text-pink-300">marco.valdemoro@gmail.com</span>
-          </SocialLinks>
-        </li>
-      </ul>
+      <nav class="flex gap-x-4 mt-6 flex-wrap">
+        <SocialLinks href="https://www.linkedin.com/in/marco-rodriguez-rey-b082361b9/">
+          <LinkedInIcon class="size-4 lg:size-6" />
+          <span class="hover:text-pink-300">LinkedIn</span>            
+        </SocialLinks>
+        <SocialLinks href="https://github.com/Markix1">
+          <LinkedInIcon class="size-4 lg:size-6" />
+          <span class="hover:text-pink-300">GitHub</span>            
+        </SocialLinks>
+        <SocialLinks href="mailto:marco.valdemoro@gmail.com">
+          <MailIcon class="size-4 lg:size-6" />
+          <span class="hover:text-pink-300">marco.valdemoro@gmail.com</span>            
+        </SocialLinks>
+      </nav>
     </SectionContainer>
 
     <SectionContainer id="experience">
