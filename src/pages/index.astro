@@ -10,7 +10,7 @@ import { Image } from "astro:assets";
 import logo from "../assets/marco.jpg";
 import aboutMePicture from "../assets/marco-2.png";
 import Experience from "../components/Experience.astro";
-import SectionContainer from "../components/Section-Container.astro";
+import SectionContainer from "../components/SectionContainer.astro";
 import Projects from "../components/Projects.astro";
 import BriefcaseIcon from "../icons/Briefcase.astro";
 import UserIcon from "../icons/User.astro";
@@ -24,8 +24,8 @@ import Footer from "../components/Footer.astro";
   description="Contrata a Marco para crear tu página web única y sostenible. Especializado en crear páginas web úicas y fiables."
 >
   <main class="px-6">
-    <SectionContainer class="py-14">
-      <Image class="rounded-full size-20 mb-8 hover:scale-125 transition-transform" src={logo} alt="logo" />
+    <SectionContainer class="py-12">
+      <Image class="rounded-full size-20 mb-8 hover:scale-125 transition-transform duration-300" src={logo} alt="logo" />
       <h1 class="text-white text-2xl md:text-4xl lg:text-4xl font-bold flex flex-row gap-x-3 pb-6 lg:pb-10">
         Buenas, mi nombre es <strong class="text-yellow-300">Marco</strong>
         <div class="flex justify-center items-center ml-6">
@@ -46,24 +46,27 @@ import Footer from "../components/Footer.astro";
           <SocialLinks
             href="https://www.linkedin.com/in/marco-rodriguez-rey-b082361b9/"
           >
-            <LinkedInIcon class="size-4 lg:size-6" />LinkedIn
+            <LinkedInIcon class="size-4 lg:size-6" />
+            <span class="hover:text-pink-300">LinkedIn</span>            
           </SocialLinks>
         </li>
         <li class="hover:scale-110 transition-transform">
           <SocialLinks href="https://github.com/Markix1">
-            <GitHubIcon class="size-4 lg:size-6" />GitHub
+            <GitHubIcon class="size-4 lg:size-6" />
+            <span class="hover:text-pink-300">GitHub</span>
           </SocialLinks>
         </li>
         <li class="hover:scale-110 transition-transform">
           <SocialLinks href="https://github.com/Markix1">
-            <MailIcon class="size-4 lg:size-6" />marco.valdemoro@gmail.com
+            <MailIcon class="size-4 lg:size-6" />
+            <span class="hover:text-pink-300">marco.valdemoro@gmail.com</span>
           </SocialLinks>
         </li>
       </ul>
     </SectionContainer>
 
     <SectionContainer id="experience">
-      <h2 class="text-3xl font-semibold mb-6 flex gap-x-3 items-center">
+      <h2 class="text-3xl font-semibold flex gap-x-3 items-center">
         <BriefcaseIcon class="size-8" />
         Experiencia Laboral
       </h2>
@@ -71,14 +74,14 @@ import Footer from "../components/Footer.astro";
     </SectionContainer>
 
     <SectionContainer id="projects">
-      <h2 class="text-3xl font-semibold mb-6 flex gap-x-4 items-center">
+      <h2 class="text-3xl font-semibold mt-48 mb-6 flex gap-x-4 items-center">
         <ClipboardIcon class="size-8" />
         Proyectos
       </h2>
       <Projects />
     </SectionContainer>
 
-    <SectionContainer id="about-me" class="py-12">
+    <SectionContainer id="about-me" class="py-10">
       <h2 class="text-3xl font-semibold mb-6 flex gap-x-4 items-center">
         <UserIcon class="size-9" />
         Sobre Mí

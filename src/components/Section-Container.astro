@@ -1,8 +1,0 @@
----
-// Se pasa el id para que cuando se le da una de las secciones vaya al container correspondiente
-const { class: className, id } = Astro.props
----
-
-<section id={id} class={`w-full lg:w-[850px] mx-auto ${className}`}>
-    <slot />
-</section>

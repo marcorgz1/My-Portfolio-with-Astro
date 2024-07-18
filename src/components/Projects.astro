@@ -1,29 +1,79 @@
 ---
+import HTMLIcon from '../icons/Html.astro'
+import CSSIcon from '../icons/Css.astro'
+import JavascriptIcon from '../icons/Javascript.astro'
+import ReactIcon from '../icons/React.astro'
+
+const TAGS = {
+    HTML: {
+        name: 'HTML',
+        class: 'bg-[#784F00] text-white',
+        icon: HTMLIcon
+    },
+    CSS: {
+        name: 'CSS',
+        class: 'bg-[#0063A2] text-white',
+        icon: CSSIcon
+    },
+    JAVASCRIPT: {
+        name: 'Javascript',
+        class: 'bg-[#9A8300] text-white font-semibold',
+        icon: JavascriptIcon
+    },
+    REACT: {
+        name: 'React',
+        class: 'bg-black text-[#00d8ff]',
+        icon: ReactIcon
+    },
+
+}
+
 // Objeto con la información de cada proyecto
 const PROJECTS = [
     {
         title: 'Arkanoid Game',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vehicula turpis nisi, sed iaculis nisl congue eu. Nulla sodales tellus vitae nisi tristique malesuada. Proin malesuada fringilla metus at scelerisque. Curabitur eget rutrum diam. Pellentesque sed ullamcorper velit. Cras pulvinar ac augue eget maximus.',
+        description: 'Juego del Arkanoid realizado con Vanilla JavaScript.',
         github: 'https://github.com/Markix1/Javascript-Projects',
         link: 'https://arkanoidgamejavascript.netlify.app/',
         image: '/projects/arkanoid_game.webp',
-        tags: ['HTML', 'CSS', 'JavaScript']
-    }
+        tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT]
+    },
+    {
+        title: 'Tinder Swipe',
+        description: 'Deslizador de Tinder realizado con Vanilla Javascript.',
+        github: 'https://github.com/Markix1/Javascript-Projects',
+        link: 'https://tinderswipejavascript.netlify.app//',
+        image: '/projects/tinder_swipe.webp',
+        tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT]
+    },
+    {
+        title: 'App de Verificación de Cuadros',
+        description: 'Aplicación para realizar verificación de cuadros de luz realizada con React.',
+        github: 'https://github.com/Markix1/App-Verificacion-Cristian',
+        link: '',
+        image: '/projects/app_verificacion_cuadros.webp',
+        tags: [TAGS.HTML, TAGS.CSS, TAGS.JAVASCRIPT, TAGS.REACT]
+    },
 ]
 ---
 {
     PROJECTS.map((project) => (
-        <article>
-            <h3>{project.title}</h3>
-            <p>{project.description}</p>
-            <ul> 
+        <article class="flex flex-col justify-center items-center py-6">
+            <h3 class="text-2xl font-bold text-yellow-300 mb-3">{project.title}</h3>
+            <p class="text-md mb-6 text-pretty">{project.description}</p>
+            <ul class="flex gap-x-12 flex-row">
             {
                 project.tags.map((tag) => (
-                    <li>{tag}</li>
+                    <li>
+                        <span class={`flex rounded-full items-center text-xs ${tag.class} px-3 pr-4 p-2 mb-10`}>
+                            <tag.icon class="size-6" />
+                                {tag.name}
+                        </span>
+                    </li>
                 ))
             }
             </ul>
-            <img src={project.image} alt={`Screenshot of the ${project.title}`}>
+            <img class="size-4/5 rounded shadow-2xl shadow-white/20 mb-6" src={project.image} alt={`Screenshot of the ${project.title}`}>
         </article>
     ))
 }
