@@ -2,7 +2,7 @@
 
 Realizado con el framework de Astro y Tailwind CSS
 
-![Portfolio Screenshot](image-1.png)
+![Portfolio Screenshot](image2.png)
 
 Mi estructura de carpetas:
 
