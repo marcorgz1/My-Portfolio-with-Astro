@@ -1,4 +1,4 @@
-# Mi portfolio como developer
+# My portfolio as a Junior Full Stack Debeloper
 
 Realizado con el framework de Astro y Tailwind CSS
 
