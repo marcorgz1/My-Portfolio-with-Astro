@@ -3,6 +3,8 @@ import HTMLIcon from '../icons/Html.astro'
 import CSSIcon from '../icons/Css.astro'
 import JavascriptIcon from '../icons/Javascript.astro'
 import ReactIcon from '../icons/React.astro'
+import GithubIcon from '../icons/GitHub.astro'
+import LinkIcon from '../icons/Link.astro'
 
 const TAGS = {
     HTML: {
@@ -22,9 +24,19 @@ const TAGS = {
     },
     REACT: {
         name: 'React',
-        class: 'bg-black text-[#00d8ff]',
+        class: 'bg-[#020013] text-[#00d8ff]',
         icon: ReactIcon
     },
+    GITHUB: {
+        name: 'Code',
+        class: 'bg-black text-[#00d8ff]',
+        icon: GithubIcon
+    },
+    LINK: {
+        name: 'Demo',
+        class: 'bg-black text-[#00d8ff]',
+        icon: LinkIcon
+    }
 
 }
 
@@ -56,16 +68,17 @@ const PROJECTS = [
     },
 ]
 ---
+<section class='flex flex-col gap-16'>
 {
-    PROJECTS.map((project) => (
+    PROJECTS.map(({ title, description, github, link, image, tags }) => (
         <article class="flex flex-col justify-center items-center py-6">
-            <h3 class="text-2xl font-bold dark:text-yellow-300 text-orange-400 mb-3">{project.title}</h3>
-            <p class="text-md mb-6 text-pretty">{project.description}</p>
+            <h3 class="text-2xl font-bold dark:text-yellow-300 text-orange-400 mb-3">{title}</h3>
+            <p class="text-md mb-6 text-pretty">{description}</p>
             <ul class="flex gap-x-12 flex-row">
             {
-                project.tags.map((tag) => (
+                tags.map((tag) => (
                     <li>
-                        <span class={`flex rounded-full items-center text-xs ${tag.class} px-3 pr-4 p-2 mb-10`}>
+                        <span class={`flex gap-2 rounded-full items-center text-xs font-semibold ${tag.class} px-3 pr-4 p-2 mb-10`}>
                             <tag.icon class="size-6" />
                                 {tag.name}
                         </span>
@@ -73,10 +86,21 @@ const PROJECTS = [
                 ))
             }
             </ul>
-            <img class="size-3/4 rounded shadow-2xl shadow-white/20 mb-6 hover:scale-105 transition" src={project.image} alt={`Screenshot of the ${project.title}`}>
+            <img class="size-3/4 rounded shadow-2xl shadow-white/20 mb-6 hover:scale-105 transition" src={image} alt={`Screenshot of the ${title}`}>
+            <div class="flex justify-between items-center gap-24 mt-16">
+                <button class="flex gap-4 text-sm font-semibold bg-gray-800 hover:bg-gray-900 transition-colors p-4 rounded-full">
+                    <GithubIcon class="size-8 lg:size-6" />
+                    <a href={github}>Code</a>
+                </button>
+                <button class="flex gap-4 text-sm font-semibold bg-gray-700 hover:bg-gray-800 transition-colors p-4 rounded-full">
+                    <LinkIcon class="size-8 lg:size-6" />
+                    <a href={link}>Demo</a>
+                </button>
+            </div>
         </article>
     ))
 }
+</div>
 
 {/* PROJECTS.map(({ title, description, tags } => {
         <article>
